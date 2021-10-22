@@ -1,3 +1,4 @@
+document.getElementById("diceRoll").addEventListener("pointerup", getAmount);
 function getAmount(){
     var amount = document.getElementById("diceAmount").value;
     var sides = document.getElementById("diceSides").value;
