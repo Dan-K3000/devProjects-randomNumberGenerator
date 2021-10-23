@@ -1,23 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 
-body{
-    color: rgba(255, 0, 255, 0.5);    
+body{    
     background-color: indigo;
-    text-align: center;
     font-family: monospace;
     font-size: 2em;
-    margin: auto 15%;
-    box-sizing: border-box;
     user-select: none;
 }
 
-hr {
-    width: 80%;
-    color: rgba(255, 0, 255, 0.5);
-    box-shadow: 0px 0px 8px 2px rgba(50, 0, 200, 0.4);
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .mainHeader{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: row wrap;
+    width: 50%;
+    margin: 10px ;
     border: 3px inset rgba(100, 0, 255, 0.2);
     border-radius: 40px;
     font-family: "Rampart One";
@@ -27,7 +30,7 @@ hr {
     text-shadow: 1px 1px 3px rgba(0, 0, 60, 0.6);
 }
 
-.mainHeader:hover, .mainHeader:active{
+.mainHeader:hover{
     cursor: grabbing;
     border-style: outset;
     background-color: rgba(149, 0, 255, 0.5);
@@ -36,35 +39,76 @@ hr {
     text-shadow: 1px 1px 6px rgba(100, 50, 255, 0.9);
 }
 
+hr {
+    width: 45%;
+    color: rgba(255, 0, 255, 0.5);
+    box-shadow: 0px 0px 8px 2px rgba(50, 0, 200, 0.4);
+}
+
 .diceOptions{
+    color: rgba(255, 0, 255, 0.5);
     text-shadow: 1px 1px 2px rgba(0, 0, 60, 0.8);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow:row wrap;
+}
+
+.diceAmount{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.diceSides{
+    width: 300px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 input[type=number] , select {
-    width: 4em;
+    text-align: center;
+    width: 100px;
+    height: 75px;
     border: 3px solid rgba(0, 0, 0, 0.3);
-    padding: px;
-    background-color: rgba(0, 0, 255, 0.4);
+    background-color: rgba(0, 0, 255, 0.8);
     border-radius: 15px;
     color:rgb(0, 255, 0);
     font-family: monospace;
     font-size: 1em;
-    text-align: center;
-    box-shadow: 0px 0px 7px 2px rgba(0, 0, 100, 0.6), inset 0 0 7px 3px rgba(150, 150, 255, 0.3);
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 100), inset 0 0 7px 3px rgba(150, 150, 255, 0.3);
 }
 
 option{
     background-color: rgba(0, 0, 255);
 }
 
+.resultsContainer{
+    display: flex;
+    justify-content: center;
+}
+
 .result {
-    margin: 50px 10%;
-    padding: 5% ;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 30px ;
+    height: 375px;
+    width: 500px;
     border: thick solid rgba(0, 0, 0, 0.5);
     border-radius: 90px;
-    background-color: rgba(0, 0, 255, 0.6);
-    color:transparent;
+    background-color: rgba(0, 0, 255, 0.8);
+    color: transparent;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 255, 0.4), inset 0 0 15px 10px rgba(150, 150, 255, 0.3);
     text-shadow: 0px 0px 1px rgba(100, 255, 50) ,-2px 1px 2px rgba(255, 0, 0, 0.5), 2px -1px 1px rgba(0, 150, 255, 0.5);
     user-select: text;
 }
+
